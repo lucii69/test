@@ -1,0 +1,227 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Happy Anniversary ❤️</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+            font-family: Arial, sans-serif;
+
+            background: linear-gradient(135deg, #1a0010, #4b0026, #16000d);
+            color: white;
+            overflow: hidden;
+        }
+
+        .container {
+            padding: 30px;
+        }
+
+        h1 {
+            font-size: 45px;
+            margin-bottom: 35px;
+            color: #ffb6d9;
+            text-shadow: 0 0 10px #ff4f9a,
+                         0 0 20px #ff4f9a,
+                         0 0 40px #ff4f9a;
+
+            animation: glow 2s infinite alternate;
+        }
+
+        @keyframes glow {
+            from {
+                text-shadow: 0 0 10px #ff4f9a;
+            }
+
+            to {
+                text-shadow: 0 0 20px #ff4f9a,
+                             0 0 40px #ff4f9a,
+                             0 0 60px #ff4f9a;
+            }
+        }
+
+        .gift {
+            width: 150px;
+            height: 120px;
+            margin: auto;
+            position: relative;
+            cursor: pointer;
+
+            transition: 0.4s;
+            animation: float 2s ease-in-out infinite;
+        }
+
+        .gift:hover {
+            transform: scale(1.15);
+        }
+
+        /* Gift box */
+        .box {
+            position: absolute;
+            bottom: 0;
+            width: 150px;
+            height: 90px;
+            background: #ff4f9a;
+            border-radius: 5px;
+            box-shadow: 0 10px 30px rgba(255, 79, 154, 0.5);
+        }
+
+        /* Gift lid */
+        .lid {
+            position: absolute;
+            top: 15px;
+            left: -8px;
+            width: 166px;
+            height: 30px;
+            background: #ff77b5;
+            border-radius: 5px;
+            z-index: 2;
+        }
+
+        /* Ribbon vertical */
+        .ribbon {
+            position: absolute;
+            left: 62px;
+            top: 15px;
+            width: 25px;
+            height: 105px;
+            background: #ffd1e6;
+            z-index: 3;
+        }
+
+        /* Bow */
+        .bow-left,
+        .bow-right {
+            position: absolute;
+            top: -10px;
+            width: 45px;
+            height: 30px;
+            background: #ffd1e6;
+            border-radius: 50%;
+            z-index: 4;
+        }
+
+        .bow-left {
+            left: 35px;
+            transform: rotate(-25deg);
+        }
+
+        .bow-right {
+            right: 35px;
+            transform: rotate(25deg);
+        }
+
+        .text {
+            margin-top: 30px;
+            font-size: 18px;
+            color: #ffd6e8;
+            letter-spacing: 2px;
+            animation: blink 1.5s infinite;
+        }
+
+        @keyframes blink {
+            50% {
+                opacity: 0.5;
+            }
+        }
+
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+
+            50% {
+                transform: translateY(-12px);
+            }
+        }
+
+        .heart {
+            position: absolute;
+            font-size: 20px;
+            animation: hearts 5s linear infinite;
+            opacity: 0.7;
+        }
+
+        @keyframes hearts {
+            0% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+
+            20% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-10vh);
+                opacity: 0;
+            }
+        }
+
+        @media (max-width: 600px) {
+            h1 {
+                font-size: 32px;
+            }
+
+            .gift {
+                transform: scale(0.9);
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <!-- Floating Hearts -->
+    <div class="heart" style="left:10%;">❤️</div>
+    <div class="heart" style="left:30%; animation-delay:1s;">💗</div>
+    <div class="heart" style="left:55%; animation-delay:2s;">💕</div>
+    <div class="heart" style="left:80%; animation-delay:3s;">❤️</div>
+
+    <div class="container">
+
+        <h1>Happy Anniversary<br>My Love ❤️</h1>
+
+        <!-- Gift Box -->
+        <div class="gift" onclick="openGift()">
+
+            <div class="bow-left"></div>
+            <div class="bow-right"></div>
+
+            <div class="lid"></div>
+
+            <div class="box"></div>
+
+            <div class="ribbon"></div>
+
+        </div>
+
+        <p class="text">✨ Touch the gift box ✨</p>
+
+    </div>
+
+    <script>
+    
+    
+        function openGift() {
+
+         window.location.href = "https://happyanniversaysudu.netlify.app/#journey";
+
+        }
+    </script>
+
+</body>
+</html>
